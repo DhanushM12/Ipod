@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
+import Ipod from "./Ipod";
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Ipod</h1>
+        <Ipod />
       </div>
     );
   }
