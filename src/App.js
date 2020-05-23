@@ -5,7 +5,7 @@ import Ipod from "./Ipod";
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="App">
         <Ipod />
       </div>
     );
