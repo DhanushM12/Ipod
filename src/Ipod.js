@@ -39,6 +39,28 @@ class Ipod extends React.Component {
       }
     });
   };
+  //method for the main menu of ipod
+  mainMenu = () => {
+    let allScreens = document.getElementsByClassName("show");
+    let currentScreen = "";
+
+    for (currentScreen of allScreens) {
+      if (currentScreen.style.visibilty === "visible") {
+        break;
+      }
+    }
+    currentScreen.style.visibilty = "hidden";
+    currentScreen.style.height = "0";
+    currentScreen.style.width = "0";
+
+    let home = document.getElementById("display");
+    home.style.visibilty = "visible";
+    home.style.height = "50%";
+    home.style.width = "95%";
+    home.style.borderTopLeftRadius = "5%";
+    home.style.borderTopRightRadius = "5%";
+    home.style.marginTop = "1%";
+  };
   render() {}
 }
 
