@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import ZingTouch from "zingtouch";
+import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 class Ipod extends React.Component {
   constructor() {
