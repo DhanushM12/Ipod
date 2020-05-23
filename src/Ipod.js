@@ -61,7 +61,44 @@ class Ipod extends React.Component {
     home.style.borderTopRightRadius = "5%";
     home.style.marginTop = "1%";
   };
-  render() {}
+  render() {
+    const items = this.state.display;
+    return (
+      <div className="main">
+        <div className="active-screen" id="display">
+          {items.map((item, index) => (
+            <div className="display-items" id={item} key={index}>
+              {item}
+            </div>
+          ))}
+        </div>
+        <div id="Coverflow-display" className="show"></div>
+        <div id="Settings-display" className="show"></div>
+        <div id="Games-display" className="show"></div>
+        <div id="Music-display" className="show"></div>
+        <div id="menu" className="controls" onClick={this.handleScroll}>
+          <button
+            id="menu-button"
+            className="buttons"
+            onClick={this.homeScreen}
+          >
+            Menu
+          </button>
+          <i className="fa fa-forward"></i>
+          {/* backward icon */}
+          <i className="fa fa-backward"></i>
+          {/* play icon */}
+          <i className="fa fa-play"></i>
+          {/* pause icon */}
+          <i className="fa fa-pause"></i>
+
+          <div className="Outer">
+            <button className="Inner" onClick={this.optionClick}></button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Ipod;
