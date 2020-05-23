@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import ZingTouch from "zingtouch";
-import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+import "../node_modules/font-awesome/css/font-awesome.min.css";
 
 class Ipod extends React.Component {
   constructor() {
@@ -62,6 +62,17 @@ class Ipod extends React.Component {
     home.style.borderTopRightRadius = "5%";
     home.style.marginTop = "1%";
   };
+
+  optionClick = () => {
+    let total = document.getElementsByClassName("display-items");
+    let t;
+    for (t of total) {
+      if (t.style.backgroundColor === "lightblue") {
+        break;
+      }
+    }
+  };
+
   render() {
     const items = this.state.display;
     return (
